@@ -18,7 +18,7 @@ DigitalIn stop(BUTTON_STOP); //1 if pressed
 
 //guard and temperature sensors
 DigitalIn guard(SWITCH_1); // 1 if guards are closed
-DigitalIn temp(SWTICH_2); // 1 if temperature exceeds desired point
+DigitalIn temp(SWITCH_2); // 1 if temperature exceeds desired point
 
 DigitalOut l1(LED_1); //is flashing if not ready, on if ready
 DigitalOut l2(LED_2); // on when motor is running
@@ -29,7 +29,7 @@ DigitalOut l4(LED_4); // in case of excess temperatur, show for 0.5s
 //vars
 bool motorState = false;
 
-int isMotorReady(); //defined
+bool isMotorReady(); //defined
 
 void runMotor(); //defined
 void stopMotor(); //defined
@@ -55,8 +55,7 @@ int main()
                 l1 = 0;
             }
         }
-            
-        }
+        
         wait(0.25);
     }
 }
