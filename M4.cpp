@@ -51,7 +51,7 @@ int main(){
     
     while(true){
         
-        wait_ms(100)
+        wait_ms(100);
     }
     
 }
